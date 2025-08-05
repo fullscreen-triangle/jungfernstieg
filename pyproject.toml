@@ -1,0 +1,255 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jungfernstieg"
+version = "0.1.0"
+description = "Biological-Virtual Neural Symbiosis System"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Kundai Farai Sachikonye", email = "kundai.sachikonye@wzw.tum.de"}
+]
+maintainers = [
+    {name = "Kundai Farai Sachikonye", email = "kundai.sachikonye@wzw.tum.de"}
+]
+keywords = [
+    "biological-neural-networks",
+    "virtual-blood", 
+    "consciousness-integration",
+    "s-entropy-navigation",
+    "oscillatory-virtual-machine",
+    "neural-viability",
+    "biological-virtual-symbiosis"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+requires-python = ">=3.11"
+dependencies = [
+    # Core computational libraries
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    
+    # Biological computation
+    "biopython>=1.81",
+    "scikit-bio>=0.5.8",
+    "networkx>=3.0",
+    
+    # Neural network libraries
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "neural-lib>=0.1.0",  # Custom neural processing
+    
+    # S-Entropy and oscillatory computation
+    "s-entropy>=1.0.0",     # Custom S-entropy framework
+    "oscillatory-vm>=1.0.0", # Custom oscillatory VM
+    
+    # Virtual Blood framework
+    "virtual-blood>=1.0.0",  # Custom Virtual Blood system
+    
+    # Environmental sensing
+    "heihachi>=1.0.0",      # Acoustic processing
+    "hugure>=1.0.0",        # Visual reconstruction  
+    "gospel>=1.0.0",        # Genomic analysis
+    
+    # Real-time monitoring and control
+    "asyncio-mqtt>=0.13.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "websockets>=11.0",
+    
+    # Data processing and analysis
+    "plotly>=5.15.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    
+    # Safety and monitoring
+    "safety-protocols>=1.0.0", # Custom safety framework
+    "biological-monitoring>=1.0.0", # Custom bio monitoring
+    
+    # Hardware interfaces
+    "serial>=3.5",
+    "gpib-ctypes>=0.3.0",
+    "ni-daqmx>=0.6.5",
+    
+    # Development and testing
+    "pytest>=7.3.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.3.0",
+    "pre-commit>=3.3.0",
+    
+    # Documentation
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+    "myst-parser>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.0",
+    "pytest-asyncio>=0.21.0", 
+    "pytest-cov>=4.1.0",
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "mypy>=1.3.0",
+    "pre-commit>=3.3.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.23.0",
+]
+
+biological = [
+    "opencv-python>=4.7.0",
+    "scikit-image>=0.21.0",
+    "bio-formats>=1.0.0",
+    "microscopy-interface>=1.0.0",
+]
+
+hardware = [
+    "pyserial>=3.5",
+    "pyvisa>=1.13.0",
+    "pyusb>=1.2.1",
+    "gpio-interface>=1.0.0",
+]
+
+monitoring = [
+    "prometheus-client>=0.17.0",
+    "grafana-api>=1.0.3",
+    "influxdb-client>=1.36.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kundai-sachikonye/jungfernstieg"
+Documentation = "https://jungfernstieg.readthedocs.io/"
+Repository = "https://github.com/kundai-sachikonye/jungfernstieg.git"
+"Bug Tracker" = "https://github.com/kundai-sachikonye/jungfernstieg/issues"
+"Research Papers" = "https://github.com/kundai-sachikonye/jungfernstieg/tree/main/docs"
+
+[project.scripts]
+jungfernstieg = "jungfernstieg.cli:main"
+jf-safety = "jungfernstieg.safety.cli:main"
+jf-monitor = "jungfernstieg.monitoring.cli:main"
+jf-neural = "jungfernstieg.biological.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["jungfernstieg*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config", 
+    "--cov=jungfernstieg",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests", 
+    "biological: Biological system tests (requires neural tissue)",
+    "safety: Safety protocol tests (critical)",
+    "hardware: Hardware interface tests",
+    "slow: Slow tests",
+    "neural_viability: Neural viability tests (CRITICAL)",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["jungfernstieg"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "biopython.*",
+    "scikit-bio.*",
+    "neural-lib.*",
+    "s-entropy.*",
+    "oscillatory-vm.*",
+    "virtual-blood.*",
+    "heihachi.*",
+    "hugure.*", 
+    "gospel.*",
+    "safety-protocols.*",
+    "biological-monitoring.*",
+]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["src/jungfernstieg"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError", 
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]

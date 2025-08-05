@@ -1,0 +1,50 @@
+# Core computational libraries
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+
+# Testing and development
+pytest>=7.3.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+pytest-mock>=3.10.0
+
+# Code quality
+black>=23.3.0
+isort>=5.12.0
+mypy>=1.3.0
+flake8>=6.0.0
+
+# Scientific computing (for future real sensor integration)
+matplotlib>=3.7.0
+plotly>=5.15.0
+seaborn>=0.12.0
+
+# Configuration and CLI
+pyyaml>=6.0
+click>=8.1.0
+rich>=13.0.0
+
+# Async and networking (for monitoring and interfaces)
+asyncio-mqtt>=0.13.0
+websockets>=11.0
+fastapi>=0.100.0
+uvicorn>=0.22.0
+
+# Data processing
+python-dateutil>=2.8.0
+pytz>=2023.0
+
+# Logging and monitoring
+structlog>=23.0.0
+prometheus-client>=0.17.0
+
+# Optional hardware interface libraries (for real implementation)
+# pyserial>=3.5        # Serial communication
+# opencv-python>=4.7.0 # Computer vision
+# sounddevice>=0.4.6   # Audio capture
+
+# Development dependencies
+jupyter>=1.0.0
+ipykernel>=6.23.0
+notebook>=6.5.0

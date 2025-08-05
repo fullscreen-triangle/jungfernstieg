@@ -1,0 +1,46 @@
+[package]
+name = "flux-dynamics"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+description = "Dynamic Flux Theory implementation for Jungfernstieg Virtual Blood circulation optimization"
+keywords = ["fluid-dynamics", "pattern-alignment", "circulation", "s-entropy"]
+categories = ["science", "simulation"]
+
+[dependencies]
+# Core async runtime
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+
+# Serialization and configuration
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+
+# Logging and error handling
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Time and scheduling
+chrono = { workspace = true, features = ["serde"] }
+
+# Advanced numerical computation for pattern alignment
+nalgebra = { workspace = true }
+ndarray = { workspace = true }
+num-traits = { workspace = true }
+
+# UUID for pattern identification
+uuid = { workspace = true, features = ["v4", "serde"] }
+
+# Core system integration
+jungfernstieg-core = { path = "../jungfernstieg-core" }
+s-entropy = { path = "../s-entropy" }
+
+[dev-dependencies]
+proptest = { workspace = true }
+tokio-test = "0.4"

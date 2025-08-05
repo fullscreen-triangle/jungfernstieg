@@ -1,0 +1,48 @@
+[package]
+name = "biological"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+description = "Biological neural network management for Jungfernstieg system"
+keywords = ["neurobiology", "neural-networks", "biological", "viability"]
+categories = ["science", "simulation"]
+
+[dependencies]
+# Core async runtime
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+
+# Serialization and configuration
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+
+# Logging and error handling
+tracing = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Time and scheduling
+chrono = { workspace = true, features = ["serde"] }
+
+# Numerical computation for neural modeling
+nalgebra = { workspace = true }
+ndarray = { workspace = true }
+num-traits = { workspace = true }
+
+# UUID for component identification
+uuid = { workspace = true, features = ["v4", "serde"] }
+
+# Metrics
+metrics = { workspace = true }
+
+# Core types
+jungfernstieg-core = { path = "../jungfernstieg-core" }
+
+[dev-dependencies]
+proptest = { workspace = true }
+tokio-test = "0.4"

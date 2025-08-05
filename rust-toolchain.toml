@@ -1,0 +1,17 @@
+[toolchain]
+channel = "1.75.0"
+components = [
+    "rustc",
+    "cargo", 
+    "rustfmt",
+    "clippy",
+    "rust-docs",
+    "rust-std",
+    "rust-analysis",
+]
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",  # ARM64 for Raspberry Pi
+    "x86_64-pc-windows-msvc",     # Windows support
+]
+profile = "default"

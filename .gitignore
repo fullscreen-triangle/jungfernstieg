@@ -1,0 +1,93 @@
+# Rust build artifacts
+/target/
+/crates/*/target/
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Configuration overrides
+config/local.toml
+config/development.local.toml
+config/production.local.toml
+
+# Biological data and experimental results
+data/
+experiments/
+neural_cultures/
+biological_samples/
+
+# Virtual Blood composition data
+virtual_blood_data/
+circulation_logs/
+viability_measurements/
+
+# Hardware calibration files
+hardware_calibration/
+device_configs/
+
+# Safety logs and monitoring data
+safety_logs/
+emergency_logs/
+monitoring_data/
+
+# S-entropy calculation cache
+s_entropy_cache/
+coordinate_cache/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Docker artifacts
+.dockerignore
+docker-compose.override.yml
+
+# Documentation build artifacts
+docs/book/
+docs/api/
+
+# Test artifacts
+test_results/
+coverage/
+*.profraw
+
+# Benchmarking results
+benchmarks/results/
+performance_data/
+
+# Hardware-specific configurations
+raspberry_pi_config/
+laboratory_setup/
+
+# Research and publication drafts
+drafts/
+submissions/
+
+# Memorial files (preserved)
+# Note: Files dedicated to Saint Stella-Lorraine Masunda are preserved
+!docs/memorial/
+!stella_lorraine_dedication.md

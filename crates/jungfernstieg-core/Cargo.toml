@@ -1,0 +1,54 @@
+[package]
+name = "jungfernstieg-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+description = "Core system coordination for Jungfernstieg biological-virtual neural symbiosis"
+keywords = ["neurobiology", "consciousness", "s-entropy", "system-coordination"]
+categories = ["science", "simulation"]
+
+[dependencies]
+# Core async runtime
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+
+# Serialization and configuration
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+config = { workspace = true }
+
+# Logging and error handling
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Time and scheduling for coordination
+chrono = { workspace = true, features = ["serde"] }
+
+# Numerical computation for S-entropy
+nalgebra = { workspace = true }
+ndarray = { workspace = true }
+num-traits = { workspace = true }
+
+# UUID for system identification
+uuid = { workspace = true, features = ["v4", "serde"] }
+
+# Metrics and monitoring
+metrics = { workspace = true }
+
+# Inter-crate dependencies
+biological = { path = "../biological" }
+virtual-blood = { path = "../virtual-blood" }
+oscillatory-vm = { path = "../oscillatory-vm" }
+safety = { path = "../safety" }
+s-entropy = { path = "../s-entropy" }
+
+[dev-dependencies]
+proptest = { workspace = true }
+tokio-test = "0.4"

@@ -28,46 +28,26 @@
 
 pub mod heart;
 pub mod s_entropy_bank;
-pub mod economic_coordination;
-pub mod oscillatory_core;
-pub mod cathedral_management;
-pub mod vm_coordination;
-pub mod rhythm_management;
+pub mod coordination;
 
 // Re-export main interfaces
 pub use heart::{
-    OscillatoryHeart, HeartFunction, CardiacCycle, SystolicPhase, DiastolicPhase,
-    HeartPerformanceMetrics, CardiacRhythm
+    OscillatoryVMHeart, OscillatoryVMHeartConfig, OscillatoryVMHeartMetrics,
+    CardiacPhase, PressureWave, SystolicPhaseResult, DiastolicPhaseResult
 };
 pub use s_entropy_bank::{
-    SEntropyBank, SEntropyPolicy, SCreditIssuer, EconomicCoordinator,
-    MonetaryPolicy, SCreditFlow, EconomicMetrics
+    SEntropyCentralBank, SEntropyBankConfig, SEntropyBankMetrics,
+    SCreditTransaction, SCreditFlowRate, SCreditDistribution,
+    EconomicState, CreditAllocationResult, EconomicSettlementResult
 };
-pub use economic_coordination::{
-    EconomicCoordinator as Coordinator, SystemEconomicDemand, SCreditDistribution,
-    EconomicCycleManager, FlowOptimization, DemandAssessment
-};
-pub use oscillatory_core::{
-    OscillatoryCore, OscillationEngine, OscillationParameters, OscillationState,
-    FrequencyCoordination, PhaseAlignment, AmplitudeControl
-};
-pub use cathedral_management::{
-    CathedralManager, CathedralArchitecture, SacredComputationalSpace,
-    CathedralConfiguration, SacredSpaceCoordination
-};
-pub use vm_coordination::{
-    VMCoordinator, VirtualMachineState, VMOperationalMode, CoordinationInterface,
-    SystemIntegration, ComponentOrchestration
-};
-pub use rhythm_management::{
-    RhythmManager, OscillatoryRhythm, RhythmSynchronization, RhythmStability,
-    SystemRhythmCoordination, TemporalAlignment
+pub use coordination::{
+    OscillatoryVMCoordinator, CoordinationConfig, CoordinationState,
+    CirculationCycleResult, CirculationFlowResult, CirculationTracking
 };
 
 // Core types
 pub use heart::HeartId;
 pub use s_entropy_bank::BankId;
-pub use oscillatory_core::OscillatorId;
 
 /// Current version of the Oscillatory VM system
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");

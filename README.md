@@ -2,9 +2,8 @@
 <p align="center"><em>What makes Jungfernstieg so interesting is that, a lot happens, but nothing in particular</em></p>
 
 <p align="center">
-  <img src="assets/images/IMG_7194-1536x908.jpg" alt="Heihachi Logo" width="300"/>
+  <img src="assets/images/IMG_7194-1536x908.jpg" alt="Heihachi Logo" width="500"/>
 </p>
-
 
 
 

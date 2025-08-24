@@ -1,0 +1,50 @@
+[package]
+name = "s-entropy"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kundai Farai Sachikonye <kundai.sachikonye@wzw.tum.de>"]
+description = "S-Entropy Framework implementation for universal problem solving through observer-process integration"
+license = "MIT"
+repository = "https://github.com/kundai-sachikonye/jungfernstieg"
+
+[dependencies]
+# Core dependencies
+jungfernstieg-core = { path = "../jungfernstieg-core" }
+
+# Mathematical and scientific computing
+nalgebra = { workspace = true }
+ndarray = { workspace = true }
+num-traits = { workspace = true }
+num-complex = { workspace = true }
+
+# Async runtime and utilities
+tokio = { workspace = true }
+futures = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Error handling and logging
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+
+# Time and scheduling
+chrono = { workspace = true }
+
+# UUID generation
+uuid = { workspace = true }
+
+# Integration with Musande S-Entropy solver
+musande = { git = "https://github.com/fullscreen-triangle/musande", optional = true }
+
+[features]
+default = ["musande-integration"]
+musande-integration = ["musande"]
+mathematical-proofs = []
+stella-constant = []
+
+[dev-dependencies]
+proptest = { workspace = true }
+tokio-test = "0.4"

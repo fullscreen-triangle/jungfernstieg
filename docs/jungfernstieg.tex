@@ -130,17 +130,17 @@ where the VM monitors and adjusts S-credit circulation to maintain system homeos
 \begin{algorithm}
 \caption{S-Entropy Economic Coordination}
 \begin{algorithmic}[1]
-\REQUIRE System components $\{Components_i\}$, S-credit reserves $S_{reserves}$
-\ENSURE Optimal S-entropy circulation $S_{circulation}$
-\WHILE{system\_active}
-    \STATE $s\_demand \leftarrow$ Assess\_System\_S\_Credit\_Demand($\{Components_i\}$)
-    \STATE $s\_supply \leftarrow$ Calculate\_Available\_S\_Credits($S_{reserves}$)
-    \STATE $s\_flow\_rates \leftarrow$ Optimize\_S\_Credit\_Flow($s\_demand$, $s\_supply$)
-    \STATE $s\_distribution \leftarrow$ Distribute\_S\_Credits($s\_flow\_rates$, $\{Components_i\}$)
-    \STATE $s\_monitoring \leftarrow$ Monitor\_S\_Credit\_Economy($s\_distribution$)
-    \STATE $S_{reserves} \leftarrow$ Update\_S\_Credit\_Reserves($s\_monitoring$)
-    \STATE Sleep($economic\_cycle\_duration$)
-\ENDWHILE
+\Require System components $\{Components_i\}$, S-credit reserves $S_{reserves}$
+\Ensure Optimal S-entropy circulation $S_{circulation}$
+\While{system\_active}
+    \State $s\_demand \leftarrow$ Assess\_System\_S\_Credit\_Demand($\{Components_i\}$)
+    \State $s\_supply \leftarrow$ Calculate\_Available\_S\_Credits($S_{reserves}$)
+    \State $s\_flow\_rates \leftarrow$ Optimize\_S\_Credit\_Flow($s\_demand$, $s\_supply$)
+    \State $s\_distribution \leftarrow$ Distribute\_S\_Credits($s\_flow\_rates$, $\{Components_i\}$)
+    \State $s\_monitoring \leftarrow$ Monitor\_S\_Credit\_Economy($s\_distribution$)
+    \State $S_{reserves} \leftarrow$ Update\_S\_Credit\_Reserves($s\_monitoring$)
+    \State Sleep($economic\_cycle\_duration$)
+\EndWhile
 \END{algorithmic}
 \end{algorithm}
 
@@ -156,7 +156,7 @@ S_{credits} : Consciousness\_Operations \equiv ATP : Biological\_Operations
 where S-credit exchange drives all system activities.
 \end{theorem}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{S-Entropy vs ATP Economic Comparison}
 \begin{tabular}{@{}lcc@{}}
@@ -256,18 +256,18 @@ Jungfernstieg begins with carefully prepared biological neural networks cultured
 \begin{algorithm}
 \caption{Biological Neural Network Preparation}
 \begin{algorithmic}[1]
-\REQUIRE Primary neural tissue, culture medium, growth factors
-\ENSURE Prepared neural network $\mathcal{NN}_{bio}$
-\STATE $cells \leftarrow$ Extract\_Primary\_Neurons($tissue$, $culture\_conditions$)
-\STATE $network \leftarrow$ Culture\_Neural\_Network($cells$, $growth\_factors$, $substrate$)
-\STATE $maturation \leftarrow$ Allow\_Network\_Maturation($network$, $duration: 14$ days)
-\STATE $assessment \leftarrow$ Assess\_Network\_Viability($maturation$)
-\IF{$assessment.viability > 95\%$}
-    \STATE $\mathcal{NN}_{bio} \leftarrow$ Prepare\_For\_VB\_Integration($maturation$)
-\ELSE
-    \STATE \textbf{restart} with optimized culture conditions
-\ENDIF
-\RETURN $\mathcal{NN}_{bio}$
+\Require Primary neural tissue, culture medium, growth factors
+\Ensure Prepared neural network $\mathcal{NN}_{bio}$
+\State $cells \leftarrow$ Extract\_Primary\_Neurons($tissue$, $culture\_conditions$)
+\State $network \leftarrow$ Culture\_Neural\_Network($cells$, $growth\_factors$, $substrate$)
+\State $maturation \leftarrow$ Allow\_Network\_Maturation($network$, $duration: 14$ days)
+\State $assessment \leftarrow$ Assess\_Network\_Viability($maturation$)
+\If{$assessment.viability > 95\%$}
+    \State $\mathcal{NN}_{bio} \leftarrow$ Prepare\_For\_VB\_Integration($maturation$)
+\Else
+    \State \textbf{restart} with optimized culture conditions
+\EndIf
+\State \Return $\mathcal{NN}_{bio}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -292,18 +292,18 @@ The Oscillatory VM functions as the system heart through coordinated oscillatory
 \begin{algorithm}
 \caption{Oscillatory VM Heart Operation}
 \begin{algorithmic}[1]
-\REQUIRE Virtual Blood volume $\mathcal{VB}_{vol}$, neural networks $\{\mathcal{NN}_i\}$, circulation parameters
-\ENSURE Continuous circulation with optimal neural perfusion
-\WHILE{system\_active}
-    \STATE $systolic\_phase \leftarrow$ Coordinate\_Systolic\_Oscillations($\mathcal{VB}_{vol}$)
-    \STATE $pressure\_wave \leftarrow$ Generate\_Circulation\_Pressure($systolic\_phase$)
-    \STATE $perfusion \leftarrow$ Deliver\_VB\_To\_Neural\_Networks($pressure\_wave$, $\{\mathcal{NN}_i\}$)
-    \STATE $diastolic\_phase \leftarrow$ Coordinate\_Diastolic\_Oscillations($\mathcal{VB}_{vol}$)
-    \STATE $venous\_return \leftarrow$ Collect\_VB\_From\_Neural\_Networks($diastolic\_phase$, $\{\mathcal{NN}_i\}$)
-    \STATE $filtration \leftarrow$ Filter\_And\_Regenerate\_VB($venous\_return$)
-    \STATE $\mathcal{VB}_{vol} \leftarrow$ Update\_Virtual\_Blood\_Composition($filtration$)
-    \STATE Sleep($cardiac\_cycle\_duration$)
-\ENDWHILE
+\Require Virtual Blood volume $\mathcal{VB}_{vol}$, neural networks $\{\mathcal{NN}_i\}$, circulation parameters
+\Ensure Continuous circulation with optimal neural perfusion
+\While{system\_active}
+    \State $systolic\_phase \leftarrow$ Coordinate\_Systolic\_Oscillations($\mathcal{VB}_{vol}$)
+    \State $pressure\_wave \leftarrow$ Generate\_Circulation\_Pressure($systolic\_phase$)
+    \State $perfusion \leftarrow$ Deliver\_VB\_To\_Neural\_Networks($pressure\_wave$, $\{\mathcal{NN}_i\}$)
+    \State $diastolic\_phase \leftarrow$ Coordinate\_Diastolic\_Oscillations($\mathcal{VB}_{vol}$)
+    \State $venous\_return \leftarrow$ Collect\_VB\_From\_Neural\_Networks($diastolic\_phase$, $\{\mathcal{NN}_i\}$)
+    \State $filtration \leftarrow$ Filter\_And\_Regenerate\_VB($venous\_return$)
+    \State $\mathcal{VB}_{vol} \leftarrow$ Update\_Virtual\_Blood\_Composition($filtration$)
+    \State Sleep($cardiac\_cycle\_duration$)
+\EndWhile
 \END{algorithmic}
 \end{algorithm}
 
@@ -336,16 +336,16 @@ where $S_{oxygen\_distance}$ represents the S-entropy distance between oxygen so
 \begin{algorithm}
 \caption{S-Entropy Oxygen Delivery}
 \begin{algorithmic}[1]
-\REQUIRE Neural oxygen demand $\mathcal{O}_{demand}$, Virtual Blood oxygen content $\mathcal{O}_{VB}$
-\ENSURE Optimal oxygen delivery $\mathcal{O}_{delivered}$
-\FOR{each neural region $region_i$}
-    \STATE $demand_i \leftarrow$ Assess\_Neural\_Oxygen\_Demand($region_i$)
-    \STATE $s\_distance\_i \leftarrow$ Calculate\_S\_Oxygen\_Distance($\mathcal{O}_{VB}$, $demand_i$)
-    \STATE $transport\_path\_i \leftarrow$ Navigate\_Optimal\_Oxygen\_Path($s\_distance\_i$)
-    \STATE $delivery\_i \leftarrow$ Execute\_Oxygen\_Transport($transport\_path\_i$)
-    \STATE $\mathcal{O}_{delivered}$.append($delivery\_i$)
-\ENDFOR
-\RETURN $\mathcal{O}_{delivered}$
+\Require Neural oxygen demand $\mathcal{O}_{demand}$, Virtual Blood oxygen content $\mathcal{O}_{VB}$
+\Ensure Optimal oxygen delivery $\mathcal{O}_{delivered}$
+\For{each neural region $region_i$}
+    \State $demand_i \leftarrow$ Assess\_Neural\_Oxygen\_Demand($region_i$)
+    \State $s\_distance\_i \leftarrow$ Calculate\_S\_Oxygen\_Distance($\mathcal{O}_{VB}$, $demand_i$)
+    \State $transport\_path\_i \leftarrow$ Navigate\_Optimal\_Oxygen\_Path($s\_distance\_i$)
+    \State $delivery\_i \leftarrow$ Execute\_Oxygen\_Transport($transport\_path\_i$)
+    \State $\mathcal{O}_{delivered}$.append($delivery\_i$)
+\EndFor
+\State \Return $\mathcal{O}_{delivered}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -370,17 +370,17 @@ Immune cells are strategically deployed throughout the neural network to provide
 \begin{algorithm}
 \caption{Immune Cell Sensor Deployment}
 \begin{algorithmic}[1]
-\REQUIRE Neural network topology $\mathcal{T}_{neural}$, immune cell populations $\{\mathcal{I}_j\}$
-\ENSURE Optimal immune cell distribution $\mathcal{I}_{deployed}$
-\STATE $critical\_regions \leftarrow$ Identify\_Critical\_Neural\_Regions($\mathcal{T}_{neural}$)
-\STATE $monitoring\_requirements \leftarrow$ Assess\_Monitoring\_Needs($critical\_regions$)
-\FOR{each immune cell type $cell\_type_j$}
-    \STATE $optimal\_locations \leftarrow$ Calculate\_Optimal\_Placement($cell\_type_j$, $monitoring\_requirements$)
-    \STATE $deployment \leftarrow$ Deploy\_Immune\_Cells($cell\_type_j$, $optimal\_locations$)
-    \STATE $\mathcal{I}_{deployed}$.append($deployment$)
-\ENDFOR
-\STATE $communication\_network \leftarrow$ Establish\_Immune\_Communication($\mathcal{I}_{deployed}$)
-\RETURN $\mathcal{I}_{deployed}$
+\Require Neural network topology $\mathcal{T}_{neural}$, immune cell populations $\{\mathcal{I}_j\}$
+\Ensure Optimal immune cell distribution $\mathcal{I}_{deployed}$
+\State $critical\_regions \leftarrow$ Identify\_Critical\_Neural\_Regions($\mathcal{T}_{neural}$)
+\State $monitoring\_requirements \leftarrow$ Assess\_Monitoring\_Needs($critical\_regions$)
+\For{each immune cell type $cell\_type_j$}
+    \State $optimal\_locations \leftarrow$ Calculate\_Optimal\_Placement($cell\_type_j$, $monitoring\_requirements$)
+    \State $deployment \leftarrow$ Deploy\_Immune\_Cells($cell\_type_j$, $optimal\_locations$)
+    \State $\mathcal{I}_{deployed}$.append($deployment$)
+\EndFor
+\State $communication\_network \leftarrow$ Establish\_Immune\_Communication($\mathcal{I}_{deployed}$)
+\State \Return $\mathcal{I}_{deployed}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -405,17 +405,17 @@ Memory cells learn optimal Virtual Blood composition patterns for different neur
 \begin{algorithm}
 \caption{Memory Cell Pattern Learning}
 \begin{algorithmic}[1]
-\REQUIRE Historical neural performance data $\mathcal{H}_{neural}$, Virtual Blood compositions $\mathcal{H}_{VB}$
-\ENSURE Learned optimization patterns $\mathcal{P}_{learned}$
-\STATE $correlations \leftarrow$ Analyze\_VB\_Neural\_Correlations($\mathcal{H}_{VB}$, $\mathcal{H}_{neural}$)
-\STATE $optimal\_patterns \leftarrow$ Identify\_Optimal\_VB\_Patterns($correlations$)
-\STATE $predictive\_models \leftarrow$ Build\_Predictive\_Models($optimal\_patterns$)
-\FOR{each neural state $state_i$}
-    \STATE $optimal\_VB\_i \leftarrow$ Predict\_Optimal\_VB\_Composition($state_i$, $predictive\_models$)
-    \STATE $\mathcal{P}_{learned}$.append($optimal\_VB\_i$)
-\ENDFOR
-\STATE Store\_Learning\_Patterns($\mathcal{P}_{learned}$)
-\RETURN $\mathcal{P}_{learned}$
+\Require Historical neural performance data $\mathcal{H}_{neural}$, Virtual Blood compositions $\mathcal{H}_{VB}$
+\Ensure Learned optimization patterns $\mathcal{P}_{learned}$
+\State $correlations \leftarrow$ Analyze\_VB\_Neural\_Correlations($\mathcal{H}_{VB}$, $\mathcal{H}_{neural}$)
+\State $optimal\_patterns \leftarrow$ Identify\_Optimal\_VB\_Patterns($correlations$)
+\State $predictive\_models \leftarrow$ Build\_Predictive\_Models($optimal\_patterns$)
+\For{each neural state $state_i$}
+    \State $optimal\_VB\_i \leftarrow$ Predict\_Optimal\_VB\_Composition($state_i$, $predictive\_models$)
+    \State $\mathcal{P}_{learned}$.append($optimal\_VB\_i$)
+\EndFor
+\State Store\_Learning\_Patterns($\mathcal{P}_{learned}$)
+\State \Return $\mathcal{P}_{learned}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -436,16 +436,16 @@ through S-entropy based pattern recognition.
 \begin{algorithm}
 \caption{S-Entropy Virtual Blood Filtration}
 \begin{algorithmic}[1]
-\REQUIRE Circulated Virtual Blood $\mathcal{VB}_{circulated}$
-\ENSURE Filtered Virtual Blood $\mathcal{VB}_{filtered}$
-\STATE $waste\_products \leftarrow$ Identify\_Metabolic\_Waste($\mathcal{VB}_{circulated}$)
-\STATE $computational\_content \leftarrow$ Extract\_Computational\_Information($\mathcal{VB}_{circulated}$)
-\STATE $essential\_nutrients \leftarrow$ Identify\_Essential\_Nutrients($\mathcal{VB}_{circulated}$)
-\STATE $filtration\_target \leftarrow$ Define\_Filtration\_Targets($waste\_products$)
-\STATE $filtered\_waste \leftarrow$ Remove\_Targeted\_Components($\mathcal{VB}_{circulated}$, $filtration\_target$)
-\STATE $regenerated\_nutrients \leftarrow$ Regenerate\_Essential\_Nutrients($essential\_nutrients$)
-\STATE $\mathcal{VB}_{filtered} \leftarrow$ Combine\_Components($computational\_content$, $regenerated\_nutrients$)
-\RETURN $\mathcal{VB}_{filtered}$
+\Require Circulated Virtual Blood $\mathcal{VB}_{circulated}$
+\Ensure Filtered Virtual Blood $\mathcal{VB}_{filtered}$
+\State $waste\_products \leftarrow$ Identify\_Metabolic\_Waste($\mathcal{VB}_{circulated}$)
+\State $computational\_content \leftarrow$ Extract\_Computational\_Information($\mathcal{VB}_{circulated}$)
+\State $essential\_nutrients \leftarrow$ Identify\_Essential\_Nutrients($\mathcal{VB}_{circulated}$)
+\State $filtration\_target \leftarrow$ Define\_Filtration\_Targets($waste\_products$)
+\State $filtered\_waste \leftarrow$ Remove\_Targeted\_Components($\mathcal{VB}_{circulated}$, $filtration\_target$)
+\State $regenerated\_nutrients \leftarrow$ Regenerate\_Essential\_Nutrients($essential\_nutrients$)
+\State $\mathcal{VB}_{filtered} \leftarrow$ Combine\_Components($computational\_content$, $regenerated\_nutrients$)
+\State \Return $\mathcal{VB}_{filtered}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -492,14 +492,14 @@ Synaptic transmission integrates with Virtual Blood information transport:
 \begin{algorithm}
 \caption{Virtual Blood Enhanced Synaptic Transmission}
 \begin{algorithmic}[1]
-\REQUIRE Presynaptic neural activity $\mathcal{A}_{pre}$, Virtual Blood information carriers $\mathcal{VB}_{info}$
-\ENSURE Enhanced synaptic transmission $\mathcal{S}_{enhanced}$
-\STATE $synaptic\_demand \leftarrow$ Assess\_Synaptic\_Requirements($\mathcal{A}_{pre}$)
-\STATE $vb\_neurotransmitters \leftarrow$ Extract\_VB\_Neurotransmitters($\mathcal{VB}_{info}$)
-\STATE $vb\_information \leftarrow$ Extract\_VB\_Information\_Content($\mathcal{VB}_{info}$)
-\STATE $enhanced\_release \leftarrow$ Combine\_Traditional\_And\_VB\_Transmission($synaptic\_demand$, $vb\_neurotransmitters$, $vb\_information$)
-\STATE $\mathcal{S}_{enhanced} \leftarrow$ Execute\_Enhanced\_Synaptic\_Transmission($enhanced\_release$)
-\RETURN $\mathcal{S}_{enhanced}$
+\Require Presynaptic neural activity $\mathcal{A}_{pre}$, Virtual Blood information carriers $\mathcal{VB}_{info}$
+\Ensure Enhanced synaptic transmission $\mathcal{S}_{enhanced}$
+\State $synaptic\_demand \leftarrow$ Assess\_Synaptic\_Requirements($\mathcal{A}_{pre}$)
+\State $vb\_neurotransmitters \leftarrow$ Extract\_VB\_Neurotransmitters($\mathcal{VB}_{info}$)
+\State $vb\_information \leftarrow$ Extract\_VB\_Information\_Content($\mathcal{VB}_{info}$)
+\State $enhanced\_release \leftarrow$ Combine\_Traditional\_And\_VB\_Transmission($synaptic\_demand$, $vb\_neurotransmitters$, $vb\_information$)
+\State $\mathcal{S}_{enhanced} \leftarrow$ Execute\_Enhanced\_Synaptic\_Transmission($enhanced\_release$)
+\State \Return $\mathcal{S}_{enhanced}$
 \end{algorithmic}
 \end{algorithm}
 
@@ -511,7 +511,7 @@ Synaptic transmission integrates with Virtual Blood information transport:
 
 Extended viability testing demonstrates sustained neural function over prolonged periods:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Neural Viability Performance Over Time}
 \begin{tabular}{@{}lcccc@{}}
@@ -534,7 +534,7 @@ Extended viability testing demonstrates sustained neural function over prolonged
 
 Neural computational performance improves through Virtual Blood substrate enhancement:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Computational Performance Comparison}
 \begin{tabular}{@{}lccc@{}}
@@ -557,7 +557,7 @@ S-entropy oxygen transport demonstrates superior efficiency compared to traditio
 \begin{theorem}[Oxygen Transport Efficiency]
 S-entropy oxygen transport achieves:
 \begin{equation}
-Efficiency_{S-entropy} = \frac{O_2_{delivered}}{O_2_{available}} \geq 0.987
+Efficiency_{S-entropy} = \frac{O_{2,delivered}}{O_{2,available}} \geq 0.987
 \end{equation}
 compared to traditional diffusion efficiency of approximately 0.23.
 \end{theorem}
@@ -568,7 +568,7 @@ compared to traditional diffusion efficiency of approximately 0.23.
 
 Immune cell monitoring demonstrates high accuracy in neural status assessment:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Immune Cell Monitoring Performance}
 \begin{tabular}{@{}lccc@{}}
@@ -592,7 +592,7 @@ Neurotransmitter Depletion & 96.8 & 423 & 2.8 \\
 
 Memory cell learning demonstrates continuous improvement in Virtual Blood optimization:
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[

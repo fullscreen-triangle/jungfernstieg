@@ -1,5 +1,5 @@
 <h1 align="center">Jungfernstieg</h1>
-<p align="center"><em>What makes Jungfernstieg so interesting is that, a lot happens, but nothing in particular</em></p>
+<p align="center"><em>A location so interesting, a lot seems to happen, but nothing in particular,like a TV fragrance advert</em></p>
 
 <p align="center">
   <img src="assets/images/IMG_7194-1536x908.jpg" alt="Heihachi Logo" width="500"/>
